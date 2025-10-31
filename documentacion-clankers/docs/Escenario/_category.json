@@ -1,0 +1,8 @@
+{
+  "label": "Escenario",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Descripción del escenario del proyecto."
+  }
+}

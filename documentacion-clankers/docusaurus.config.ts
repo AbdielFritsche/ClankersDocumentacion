@@ -39,13 +39,7 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -68,6 +62,45 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'proyecto',
+        path: 'docs/Proyecto',
+        routeBasePath: 'proyecto',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'escenario',
+        path: 'docs/Escenario',
+        routeBasePath: 'escenario',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'implementacion',
+        path: 'docs/Implementacion',
+        routeBasePath: 'implementacion',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'nosotros',
+        path: 'docs/Nosotros',
+        routeBasePath: 'nosotros',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+  ],
+  
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -75,7 +108,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: '',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -83,62 +116,40 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'proyectoSidebar', // <-- El ID de tu sidebar.js
+          docsPluginId: 'proyecto',      // <-- El ID de tu plugin
           position: 'left',
-          label: 'Tutorial',
+          label: 'Proyecto',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+          type: 'docSidebar',
+          sidebarId: 'escenarioSidebar',
+          docsPluginId: 'escenario',
+          position: 'left',
+          label: 'Escenario',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'implementacionSidebar',
+          docsPluginId: 'implementacion',
+          position: 'left',
+          label: 'Implementación',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'nosotrosSidebar',
+          docsPluginId: 'nosotros',
+          position: 'left',
+          label: 'Nosotros',
         },
       ],
     },
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
+        
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Clankers.`,
     },
     prism: {
       theme: prismThemes.github,
