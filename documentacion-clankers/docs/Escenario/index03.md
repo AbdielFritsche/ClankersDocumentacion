@@ -1,6 +1,6 @@
 ---
 title: Definición Requerimientos
-sidebar_label: Requerimientos del Escenario
+sidebar_label: Definición de Requerimientos
 position: 3
 ---
 
