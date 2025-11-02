@@ -1,6 +1,6 @@
 ---
 slug: /servicios
-title: Servicios
+title: Servicios de la Arquitectura
 sidebar_label: Servicios de la Arquitectura
 ---
 
