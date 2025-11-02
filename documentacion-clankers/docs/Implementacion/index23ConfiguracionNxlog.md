@@ -867,7 +867,7 @@ Si la conexión es exitosa, el SIEM está accesible.
 #### Mediante Test-NetConnection (PowerShell - Windows 10)
 
 ```powershell
-Test-NetConnection -ComputerName 192.168.1.100 -Port 514
+Test-NetConnection -ComputerName IP SIEM -Port Puerto Declarado
 ```
 
 ## Solución de Problemas Comunes
