@@ -4,6 +4,10 @@ title: Configuracion Router Cisco
 sidebar_label: Configuracion Router Cisco
 ---
 
+:::info Importante
+Esta configuración esta pensada específicamente para realizar el montaje inicial de la arquitectura ya que más adelante con la configuración de F5 BIG-IP, **la máquina virtual de BIG-IP actuara como router**. Una vez implementado el firewall no será necesario el router.
+:::
+
 ## Router-on-a-Stick (ROAS)
 
 Esta configuración implementa un "Router-on-a-Stick" (ROAS). Su propósito es usar una **única interfaz física** del router (`GigabitEthernet0/0`) para **enrutar el tráfico entre múltiples VLANs**.
