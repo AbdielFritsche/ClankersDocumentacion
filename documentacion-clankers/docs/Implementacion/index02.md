@@ -1,5 +1,5 @@
 ---
-slug: /Sistemas Operativos
+slug: /sistemas-operativos
 title: Sistemas Operativos
 sidebar_label: Sistemas Operativos
 ---

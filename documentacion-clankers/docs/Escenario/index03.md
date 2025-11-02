@@ -1,5 +1,6 @@
 ---
-title: Definición Requerimientos
+slug: /definicion-requerimiento
+title: Definición de Requerimientos
 sidebar_label: Definición de Requerimientos
 position: 3
 ---

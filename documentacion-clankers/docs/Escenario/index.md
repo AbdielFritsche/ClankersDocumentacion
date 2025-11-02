@@ -1,4 +1,5 @@
 ---
+slug: /escenario
 title: Definición del Escenario
 sidebar_label: Definicion del escenario
 position: 1

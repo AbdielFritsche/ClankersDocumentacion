@@ -1,5 +1,5 @@
 ---
-slug: /implementacion
+slug: /equipos-fisicos
 title: Implementación del Laboratorio
 sidebar_label: Equipos Fisicos
 ---

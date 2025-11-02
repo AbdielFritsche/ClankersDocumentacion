@@ -1,5 +1,5 @@
 ---
-slug: /Software Utilizado
+slug: /software-utilizado
 title: Software Utilizado
 sidebar_label: Software Utilizado
 ---
@@ -8,15 +8,25 @@ sidebar_label: Software Utilizado
 
 ### Monitoreo de Software - Terceros
 
+**Docker**
+* **Uso:** Es la plataforma de motor de contenedores. Se utilizará para desplegar y aislar los servicios de monitoreo (Grafana, InfluxDB) y el gestor de contenedores (Portainer). Esto simplifica la instalación, las actualizaciones y la gestión de dependencias, empaquetando cada aplicación en su propio entorno.
+* **Configuración Base:** Se instala Docker Engine en una VM dedicada (ej. Ubuntu Server). Se utiliza `docker-compose.yml` para definir y orquestar todos los servicios (Portainer, Grafana, InfluxDB) y sus redes y volúmenes persistentes.
+* **Lugar en la arquitectura:** Se instala en una VM dedicada dentro de la DMZ/Servicios (192.168.20.0). Esta VM será el "Host de Docker".
+
+**Portainer**
+* **Uso:** Es una interfaz de usuario web (GUI) para la gestión de Docker. Permite al personal de IT monitorear fácilmente el estado de los contenedores (CPU, RAM), iniciarlos, detenerlos, reiniciarlos y gestionar volúmenes y redes sin necesidad de usar la línea de comandos.
+* **Configuración Base:** Se despliega como un contenedor de Docker (generalmente el primero). Se le da acceso al "socket" de Docker del host (`/var/run/docker.sock`) para que pueda gestionar los demás contenedores.
+* **Lugar en la arquitectura:** Corre como un contenedor dentro de la VM Host de Docker (192.168.20.0). Se accede a su interfaz web (ej. puerto 8000) desde la red de IT (VLAN 20).
+
 **Grafana**
 * **Uso:** Es la plataforma de visualización y dashboarding. Se utiliza para crear paneles de control (dashboards) en tiempo real que muestran gráficas y alertas. Grafana no almacena datos; consulta InfluxDB para obtener las métricas y las presenta de forma legible.
 * **Configuración Base:** Se instala el servicio de Grafana. Se configura una "Fuente de Datos" (Data Source) para conectarse a la base de datos InfluxDB (especificando su IP, puerto y credenciales). Luego, se crean o importan los dashboards seleccionando las métricas (queries) de InfluxDB que se desean graficar (ej. uso de CPU, consumo de memoria RAM para cada VM hosteada).
-* **Lugar en la arquitectura:** Se instala idealmente en una VM dedicada dentro de la DMZ/Servicios (192.168.100.0). El personal de IT y Administración (VLAN 10 y 2) accedería a su interfaz web a través de la red para monitorear el estado de toda la infraestructura.
+* **Lugar en la arquitectura:** Se instala idealmente en una VM dedicada dentro de la IT (192.168.20.0). El personal de IT y Administración (VLAN 20 y 2) accedería a su interfaz web a través de la red para monitorear el estado de toda la infraestructura.
 
 **InfluxDB**
 * **Uso:** Es la base de datos de series temporales (Time Series Database - TSDB). Su propósito es almacenar de manera altamente eficiente cualquier métrica que cambie con el tiempo: uso de CPU/RAM de servidores, tráfico de red, logs, temperaturas, etc. Es el backend de almacenamiento para Grafana.
 * **Configuración Base:** Se instala el servicio InfluxDB. Se crea una base de datos (ej. "metrics") y "buckets" para organizar los datos. Se configuran las políticas de retención (cuánto tiempo se guardan los datos, ej. 30 días)
-* **Lugar en la arquitectura:** Se instala en una VM dedicada dentro de la DMZ/Servicios (192.168.100.0), preferiblemente en la misma máquina que Grafana si los recursos son limitados, o en una VM separada para mejor rendimiento.
+* **Lugar en la arquitectura:** Se instala en una VM dedicada dentro de la IT (192.168.20.0), preferiblemente en la misma máquina que Grafana si los recursos son limitados, o en una VM separada para mejor rendimiento.
 
 **Nxlog**
 * **Uso:** Es un agente de recolección de logs (log collector). Se instala en las máquinas que se desea monitorear (Windows). Su función es leer archivos de log (ej. Event Logs de Windows), filtrarlos, convertirlos a un formato estructurado (como JSON) y enviarlos a Graylog para su procesamiento.

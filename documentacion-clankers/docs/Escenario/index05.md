@@ -1,4 +1,5 @@
 ---
+slug: /estrategia-ciberseguridad
 title: Estrategia de Ciberseguridad 
 sidebar_label: Estrategia de Ciberseguridad
 position: 5

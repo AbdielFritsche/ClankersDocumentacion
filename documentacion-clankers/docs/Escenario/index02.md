@@ -1,4 +1,5 @@
 ---
+slug: /linea-base
 title: Linea Base de Seguridad
 sidebar_label: Linea Base
 position: 2

@@ -1,4 +1,5 @@
 ---
+slug: /arquitectura
 title: Arquitectura
 sidebar_label: Arquitectura del escenario
 position: 4
