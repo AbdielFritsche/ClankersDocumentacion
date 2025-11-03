@@ -70,7 +70,7 @@ services:
     depends_on:
       - database
     ports:
-      - "9090:8080"
+      - "8080:8080"
     restart: unless-stopped
     networks:
       - supervisory_net
