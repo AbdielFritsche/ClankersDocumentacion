@@ -638,17 +638,17 @@ Los **Pipelines** son flujos de procesamiento avanzados.
 
 #### Configurar Clientes
 
-#### Cliente Windows (Sidecar + Winlogbeat)
+#### Cliente Windows (Nxlog)
 
-1. Descargar **Graylog Sidecar** desde GitHub
+1. Descargar **NxLog** desde su página oficial
 2. Instalar en cliente Windows:
-   ```powershell
-   graylog_sidecar_installer_1.5.0-1.exe /S -SERVERURL="http://graylog-server:9000/api" -APITOKEN="tu_token_api"
-   ```
 3. Configurar Collector en Graylog:
    - **System** → **Sidecars** → **Configuration**
-   - Crear configuración Winlogbeat
-4. Asignar configuración al cliente
+4. Asignar configuración al cliente dependiendo de la version
+
+:::info Nota
+Para mas informacion de como configurar NXLog en Windows, hay un apartado destinado solo a NXLog y sus configuraciones con multiples sistemas Windows
+:::
 
 #### Cliente Linux (Syslog)
 
@@ -1139,6 +1139,9 @@ Integrar con plataformas SOAR (Security Orchestration, Automation and Response):
 
 ---
 
+:::warning Importante
+Tome en cuenta que al combinar con una solucion de tipo SOAR, debe tener los suficientes recursos de RAM y procesador, estos pueden variar dependiendo de su infraestructura.
+:::
 
 ### Recursos Adicionales
 
