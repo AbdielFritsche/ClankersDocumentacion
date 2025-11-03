@@ -410,7 +410,7 @@ Factory I/O permite guardar "plantillas" de componentes:
 #### Factory I/O
 - **Sitio Web:** [FactoryIO](https://factoryio.com)
 - **Documentación:** [FactoryIO Documentacion](https://docs.factoryio.com)
-- **Tutoriales en Video:** [Canal de YouTube Factory I/O](https://www.youtube.com/@RealGames)
+- **Tutoriales en Video:** [Canal de YouTube Factory I/O](https://www.youtube.com/@RealgamesPt)
 
 #### OpenPLC
 - **Sitio Web:** [OpenPLC](https://www.openplcproject.com)
