@@ -4,7 +4,7 @@ title: Configuración Graylog
 sidebar_label: Configuración SIEM-Graylog
 ---
 
-### Introducción a Graylog
+## Introducción a Graylog
 
 **Graylog** es una plataforma SIEM (Security Information and Event Management) de código abierto que permite la recolección, almacenamiento, análisis y monitoreo de datos de logs en tiempo real. Es una solución escalable, flexible y económica para organizaciones que necesitan visibilidad completa de su infraestructura de seguridad.
 
@@ -24,13 +24,13 @@ sidebar_label: Configuración SIEM-Graylog
 
 Un **SIEM** (Security Information and Event Management) es una solución de seguridad que combina dos aspectos fundamentales:
 
-### Security Event Management (SEM)
+#### Security Event Management (SEM)
 - Monitoreo en tiempo real de eventos de seguridad
 - Correlación de eventos
 - Notificaciones y alertas
 - Vistas de consola para análisis
 
-### Security Information Management (SIM)
+#### Security Information Management (SIM)
 - Almacenamiento a largo plazo de registros
 - Manipulación y análisis de datos históricos
 - Generación de reportes
