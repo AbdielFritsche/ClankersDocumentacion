@@ -1111,7 +1111,7 @@ docker exec -it influxdb influx bucket update \
 - **InfluxDB 2.x Docs**: [Documentación Influx](https://docs.influxdata.com/influxdb/v2.7/)
 - **Flux Language**: [Documentación Flux](https://docs.influxdata.com/flux/v0.x/)
 - **InfluxDB API**: [InfluxDB API](https://docs.influxdata.com/influxdb/v2.7/api/)
-- **Proxmox Metric Server**: [Proxmox Metric Server](https://pve.proxmox.com/wiki/Metric_Server)
+- **Proxmox Metric Server**: [Proxmox Metric Server](https://pve.proxmox.com/wiki/External_Metric_Server)
 
 #### Comunidad y Soporte
 

@@ -18,4 +18,4 @@ Este diagrama documenta la **topología física** y el inventario de hardware qu
 
 ### Enlace a Diagramas
 
-Enlace al diagramas: [Diagrama de Arquitectura Físico y Lógico](https://lucid.app/lucidchart/6f986918-c2f5-44e1-9aa5-1bbecff4f7ae/view)
+Enlace al diagramas: [Diagrama de Arquitectura Físico](https://lucid.app/lucidchart/6f986918-c2f5-44e1-9aa5-1bbecff4f7ae/view)
