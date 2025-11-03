@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Documentacion Clankers',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Acceso a la implementación del proyecto Clankers',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
