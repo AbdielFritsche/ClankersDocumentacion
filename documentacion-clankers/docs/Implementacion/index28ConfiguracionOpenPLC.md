@@ -527,16 +527,42 @@ El mapeo depende del hardware que uses:
 
 ### Troubleshooting (Solución de Problemas)
 
-#### **Problema: No puedo acceder a la interfaz web del Runtime**
--  Verifica que el Runtime esté corriendo: `sudo systemctl status openplc`
--  Verifica la IP: `ip addr` (Linux) o `ipconfig` (Windows)
--  Asegúrate de usar el puerto correcto (`:8080`)
--  Revisa el firewall: `sudo ufw allow 8080` (Linux)
+#### Problema: No puedo acceder a la interfaz web del Runtime
 
-#### **Problema: El programa no compila en el Runtime**
--  Revisa los mensajes de error en la página de **Programs**
--  Verifica que el archivo `.st` sea válido (ábrelo en un editor de texto)
--  Comprueba que no hay errores de sintaxis en el Editor
+- Verifica que el Runtime esté corriendo: sudo systemctl status openplc
+- Verifica la IP: ip addr (Linux) o ipconfig (Windows)
+- Asegúrate de usar el puerto correcto (:8080)
+- Revisa el firewall: sudo ufw allow 8080 (Linux)
+
+#### Problema: El programa no compila en el Runtime
+
+- Revisa los mensajes de error en la página de Programs
+- Verifica que el archivo .st sea válido (ábrelo en un editor de texto)
+- Comprueba que no hay errores de sintaxis en el Editor
+- Asegúrate de que el programa no sea muy grande para el hardware (especialmente en Arduino)
+- Verifica que todas las librerías necesarias estén instaladas
+
+#### Problema: Las variables no cambian en Monitoring
+
+- Asegúrate de que el PLC esté en modo Running (Dashboard)
+- Verifica que el hardware I/O esté correctamente mapeado
+- Comprueba las conexiones físicas (cables, sensores, actuadores)
+- Usa "Force" para probar manualmente si la lógica funciona
+
+#### Problema: Modbus no se conecta
+
+- Verifica IP, Puerto y Slave ID
+- Usa herramientas como ModbusPal o QModMaster para probar el dispositivo
+- Revisa el firewall (puerto 502 para Modbus TCP)
+- Para RTU: verifica baudrate, paridad, y stop bits
+- Revisa los logs del Runtime: /var/log/openplc.log (Linux)
+
+#### Problema: El Editor no abre o da errores
+
+- Verifica que Python esté instalado (el Editor lo requiere)
+- Reinstala el Editor
+- Revisa permisos de archivo
+- En Linux: asegúrate de que el archivo .run sea ejecutable: chmod +x OpenPLC_Editor*.run
 
 ---
 
