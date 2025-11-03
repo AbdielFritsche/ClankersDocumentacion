@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
+  title: 'Documentacion Clankers',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -111,7 +111,7 @@ const config: Config = {
       title: '',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/clanker.png',
       },
       items: [
         {
