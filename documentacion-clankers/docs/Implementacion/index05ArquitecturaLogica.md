@@ -21,3 +21,7 @@ Este diagrama ilustra la **topología lógica** de la red. Su objetivo principal
 * **Los Flujos de Tráfico (ACLs):** Define las rutas de comunicación permitidas y denegadas entre las zonas (ej. el flujo controlado de OT a la DMZ, y la restricción de IT a OT).
 
 ---
+
+### Enlace a Diagramas
+
+Enlace al diagramas: [Diagrama de Arquitectura Lógico](https://lucid.app/lucidchart/6f986918-c2f5-44e1-9aa5-1bbecff4f7ae/view)
