@@ -90,7 +90,7 @@ const config: Config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
-    [
+    /*[
       '@docusaurus/plugin-content-docs',
       {
         id: 'nosotros',
@@ -98,7 +98,7 @@ const config: Config = {
         routeBasePath: 'nosotros',
         sidebarPath: require.resolve('./sidebars.js'),
       },
-    ],
+    ],*/
   ],
   
   themeConfig: {
@@ -135,13 +135,13 @@ const config: Config = {
           position: 'left',
           label: 'Implementación',
         },
-        {
+        /*{
           type: 'docSidebar',
           sidebarId: 'nosotrosSidebar',
           docsPluginId: 'nosotros',
           position: 'left',
           label: 'Nosotros',
-        },
+        },*/
       ],
     },
     footer: {
