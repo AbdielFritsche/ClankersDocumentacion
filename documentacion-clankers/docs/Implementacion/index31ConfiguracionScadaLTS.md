@@ -25,30 +25,31 @@ docker-compose --version
 
 ### Instalación de SCADA-LTS
 
-#### Docker Run (Instalación Simple)
-
-#### Crear el volumen para persistencia de datos
+Pull de las imagenes a Docker para generar el Compose:
 ```bash
-docker volume create scadalts_data
+docker pull mysql/mysql-server:5.7
+docker pull scadalts/scadalts:latest
 ```
 
-#### Ejecutar el contenedor SCADA-LTS
+Archivo de ejemplo .env para MySQL:
 ```bash
-docker run -d \
-  --name scadalts \
-  -p 8080:8080 \
-  -v scadalts_data:/opt/tomcat/webapps/Scada-LTS/uploads \
-  -e TZ=America/Mexico_City \
-  --restart unless-stopped \
-  scadalts/scadalts:latest
+MYSQL_ROOT_PASSWORD=root
+MYSQL_USER=root
+MYSQL_PASSWORD=root
+MYSQL_DATABASE=scadalts
 ```
+
+:::warning Importante
+El archivo .env debe estar en el mismo folder que el archivo docker-compose.yml mas adelante, además se debe tener las imagenes previamente para poder inicializar el contenedor.
+:::
 
 #### Docker Compose (Recomendado)
 
 Crea un archivo `docker-compose.yml`:
 
 ```yaml
-database:
+services:
+  database:
     container_name: mysql
     image: mysql/mysql-server:5.7
     ports:
@@ -59,59 +60,29 @@ database:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
     volumes:
-      - ./docker/volumes/databases:/home/
+      - ./docker/volumes/databases:/var/lib/mysql
     networks:
       - supervisory_net
 
-scadalts:
-    image: scadalts/scadalts:latest
+  scadalts:
     container_name: scadalts
+    image: scadalts/scadalts:latest
     depends_on:
       - database
     ports:
-      - "8080:8080"
+      - "9090:8080"
     restart: unless-stopped
-    volumns:
-      - scadalts_data:/opt/tomcat/webapps/Scada-LTS/uploads
-      - scadalts_config:/opt/tomcat/conf
-      - scadalts_logs:/opt/tomcat/logs
     networks:
       - supervisory_net
+
+networks:
+  supervisory_net:
+    driver: bridge
 ```
 
 Inicia el servicio:
 ```bash
 docker-compose up -d
-```
-
----
-
-### Configuración de Volúmenes
-
-#### Descripción de Volúmenes
-
-| Volumen | Ruta en Contenedor | Propósito |
-|---------|-------------------|-----------|
-| `scadalts_data` | `/opt/tomcat/webapps/Scada-LTS/uploads` | Archivos subidos y datos de usuario |
-| `scadalts_config` | `/opt/tomcat/conf` | Configuración de Tomcat |
-| `scadalts_logs` | `/opt/tomcat/logs` | Logs del sistema |
-| `mysql_data` | `/var/lib/mysql` | Base de datos MySQL 5.7 |
-
-#### Verificar Volúmenes Creados
-
-```bash
-docker volume ls
-docker volume inspect scadalts_data
-```
-
-#### Backup de Volúmenes
-
-```bash
-# Crear backup
-docker run --rm -v scadalts_data:/data -v $(pwd):/backup ubuntu tar czf /backup/scadalts_backup_$(date +%Y%m%d).tar.gz /data
-
-# Restaurar backup
-docker run --rm -v scadalts_data:/data -v $(pwd):/backup ubuntu tar xzf /backup/scadalts_backup_YYYYMMDD.tar.gz -C /
 ```
 
 ---
