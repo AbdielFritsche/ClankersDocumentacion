@@ -98,7 +98,7 @@ El Runtime se instala en el dispositivo que servirá como controlador.
 
 #### **Windows:**
 
-1.  Descarga el instalador desde [Runtime para Windows](https://www.openplcproject.com/runtime/windows)
+1.  Descarga el instalador desde [Runtime para Windows](https://autonomylogic.com/docs/installing-openplc-runtime-on-windows)
 2.  Ejecuta el archivo `.exe` y sigue las instrucciones del asistente
 3.  El Runtime se instalará como un servicio de Windows
 
@@ -135,7 +135,7 @@ Si vez la pantalla de login, ¡la instalación fue exitosa!
 
 El Editor se instala en tu PC de trabajo (donde vas a programar).
 
-1.  Ve a la sección de descargas: [https://www.openplcproject.com/plcopen-editor](https://www.openplcproject.com/plcopen-editor)
+1.  Ve a la sección de descargas: [OpenPLC Editor Download](https://autonomylogic.com/download-windows)
 2.  Descarga el instalador correspondiente a tu sistema operativo:
     - **Windows:** `OpenPLC_Editor_v*.exe`
     - **macOS:** `OpenPLC_Editor_v*.dmg`
@@ -254,7 +254,7 @@ Después de agregar el dispositivo, debes configurar qué variables de tu progra
       - `6` - Write Single Register
       - `15/16` - Write Multiple Coils/Registers
 
-> **Aprende más sobre Modbus:** [Informacion Modbus](https://www.simplymodbus.ca/) - Excelente recurso para entender el protocolo
+> **Aprende más sobre Modbus:** [Informacion Modbus](https://www.simplymodbus.ca) - Excelente recurso para entender el protocolo
 
 > **Común:** Si tu dispositivo no responde, verifica:
 > - La IP/Puerto son correctos
@@ -323,7 +323,7 @@ Setpoint : REAL := 25.5;
 - `TIME` - Tiempo (Ej: `T#5s` = 5 segundos)
 - `STRING` - Cadena de texto
 
-> **Referencia IEC 61131-3:** [IEC 61131-3](https://www.plcopen.org/iec-61131-3)
+> **Referencia IEC 61131-3:** [IEC 61131-3](https://www.plcopen.org/standards)
 
 #### Programar en Escalera (LD) y Bloques (FBD)
 
@@ -470,7 +470,7 @@ El mapeo depende del hardware que uses:
   - Salidas digitales: Pines 2-13
   - Entradas analógicas: A0-A5
 
-> **Documentación de I/O:** [Documentacion para placas físicas](https://www.openplcproject.com/reference/basics/io-addressing)
+> **Documentación de I/O:** [Documentacion para placas físicas](https://autonomylogic.com/docs/installing-openplc-runtime-on-arduino-and-other-platforms)
 
 ---
 
