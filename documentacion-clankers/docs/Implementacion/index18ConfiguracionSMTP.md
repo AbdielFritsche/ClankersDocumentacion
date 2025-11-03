@@ -1,5 +1,5 @@
 ---
 slug: /configuracion-smtp
-title: Configuracion SMTP
-sidebar_label: Configuracion SMTP
+title: Configuración SMTP
+sidebar_label: Configuración SMTP
 ---

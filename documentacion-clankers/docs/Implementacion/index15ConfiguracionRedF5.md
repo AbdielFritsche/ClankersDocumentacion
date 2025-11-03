@@ -1,17 +1,17 @@
 ---
 slug: /configuracion-red-f5
-title: Configuracion Red F5
-sidebar_label: Configuracion Red F5
+title: Configuración Red F5
+sidebar_label: Configuración Red F5
 ---
 
 :::info
 Es importante que al momento de configurar las interfaces para la máquina vritual de F5 BIG-IP debe tener una interfaz por cada red en la que se va a establecer el firewall, en nuestro caso se añaden 6 interfaces.
 :::
 
-## Configuración de IP de management
+### Configuración de IP de management
 Dentro de F5 BIG-IP durante la configuración inicial será necesario ingresar la dirección IP en la cuál estará estableciada la interfaz gráfica de configuración, en nuestra arquitectura esa dirección será **192.168.2.3** y mediante el puerto **8443** será posible acceder a la GUI.
 
-## Configuración de VLANS
+### Configuración de VLANS
 En la sección de ``` Network > VLANs``` se crean las 5 VLANs de datos para la red:
 
 * VLAN_10_Corp:
@@ -36,7 +36,7 @@ En la sección de ``` Network > VLANs``` se crean las 5 VLANs de datos para la r
 
 Al seleccionar la interfaz se marca como untagged ya que tenemos un switch externo que ya esta marcando el tráfico con la etiqueta correspondiente a su VLAN.
 
-## Configuración de Self IPs (Gateways)
+### Configuración de Self IPs (Gateways)
 
 En la sección de ```Network > Self IP's``` se asocia una IP para cada VLAN creada y su interfaz asociada. Esta IP será el gateway de la red asociada a la VLAN.
 

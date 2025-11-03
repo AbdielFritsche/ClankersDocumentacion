@@ -1,7 +1,7 @@
 ---
 slug: /configuracion-red-proxmox
-title: Configuracion Red Proxmox
-sidebar_label: Configuracion Red Proxmox
+title: Configuración Red Proxmox
+sidebar_label: Configuración Red Proxmox
 ---
 
 ## Configuración de las interfaces en Proxmox

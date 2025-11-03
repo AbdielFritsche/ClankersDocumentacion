@@ -1,5 +1,5 @@
 ---
 slug: /configuracion-rsyslog
-title: Configuracion Rsyslog
-sidebar_label: Configuracion Rsyslog
+title: Configuración Rsyslog
+sidebar_label: Configuración Rsyslog
 ---
