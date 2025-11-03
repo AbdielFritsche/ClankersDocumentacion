@@ -1,7 +1,7 @@
 ---
 slug: /configuracion-dhcp
-title: Configuracion DHCP
-sidebar_label: Configuracion DHCP
+title: Configuración DHCP
+sidebar_label: Configuración DHCP
 ---
 
 ## Configuración de Servidor DHCP con ISC-DHCP-Server

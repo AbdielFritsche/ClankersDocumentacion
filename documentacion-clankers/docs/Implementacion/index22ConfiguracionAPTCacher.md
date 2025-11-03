@@ -1,7 +1,7 @@
 ---
 slug: /configuracion-apt-cacher
-title: Configuracion APT Cacher
-sidebar_label: Configuracion APT Cacher
+title: Configuración APT Cacher
+sidebar_label: Configuración APT Cacher
 ---
 
 ## Configuración de APT-Cacher-NG en Linux

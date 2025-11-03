@@ -1,5 +1,5 @@
 ---
 slug: /configuracion-http
-title: Configuracion HTTP
-sidebar_label: Configuracion HTTP
+title: Configuración HTTP
+sidebar_label: Configuración HTTP
 ---

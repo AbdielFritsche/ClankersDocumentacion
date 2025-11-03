@@ -1,7 +1,7 @@
 ---
 slug: /arquitectura-fisica
-title: Arquitectura Fisica
-sidebar_label: Arquitectura Fisica de la Red
+title: Arquitectura Física
+sidebar_label: Arquitectura Física de la Red
 ---
 
 ###  Diagrama de Arquitectura Física

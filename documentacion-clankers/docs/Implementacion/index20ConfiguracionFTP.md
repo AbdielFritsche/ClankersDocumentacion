@@ -1,5 +1,5 @@
 ---
 slug: /configuracion-ftp
-title: Configuracion FTP
-sidebar_label: Configuracion FTP
+title: Configuración FTP
+sidebar_label: Configuración FTP
 ---

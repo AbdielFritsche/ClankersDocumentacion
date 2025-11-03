@@ -1,5 +1,5 @@
 ---
-slug: /configuracion-scadalts
-title: Configuracion ScadaLTS
-sidebar_label: Configuracion ScadaLTS
+slug: /configuración-scadalts
+title: Configuración ScadaLTS
+sidebar_label: Configuración ScadaLTS
 ---

@@ -1,7 +1,7 @@
 ---
 slug: /configuracion-switch-cisco
-title: Configuracion Switch Cisco
-sidebar_label: Configuracion Switch Cisco
+title: Configuración Switch Cisco
+sidebar_label: Configuración Switch Cisco
 ---
 
 ## Configuración de Switch con VLANs

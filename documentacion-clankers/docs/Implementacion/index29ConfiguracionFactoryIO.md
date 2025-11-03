@@ -1,5 +1,5 @@
 ---
 slug: /configuracion-factoryio
-title: Configuracion FactoryIO
-sidebar_label: Configuracion FactoryIO
+title: Configuración FactoryIO
+sidebar_label: Configuración FactoryIO
 ---
