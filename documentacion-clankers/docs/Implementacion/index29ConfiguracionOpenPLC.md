@@ -577,7 +577,7 @@ Antes de comenzar, aquí están los recursos más importantes:
 
 #### Comunidad y Soporte
 - **Foro Oficial:** [Foro OpenPLC](https://openplc.discussion.community)
-- **Canal de YouTube:** [OpenPLC Project](https://www.youtube.com/@OpenPLCproject) - Tutoriales en video
+- **Canal de YouTube:** [OpenPLC Project](https://www.youtube.com/@openplc) - Tutoriales en video
 - **Discord:** Comunidad activa para consultas en tiempo real
 - **Stack Overflow:** Tag `openplc` para preguntas técnicas
 
