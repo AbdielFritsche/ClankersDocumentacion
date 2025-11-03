@@ -3,7 +3,7 @@ title: Justificación y Objetivos
 sidebar_position: 1
 ---
 
-## 1.1 El Panorama: La Nueva Frontera del Riesgo
+## El Panorama: La Nueva Frontera del Riesgo
 
 La industria manufacturera se encuentra en una encrucijada. Durante décadas, las redes de Tecnología de Operaciones (OT) que controlan la maquinaria física como PLCs, robots y sistemas CNC operaron en un completo aislamiento, priorizando la disponibilidad y la seguridad física por encima de todo.
 
@@ -15,7 +15,7 @@ El crecimiento de los ataques a la industria es exponencial. Ya no se trata de s
 * **Paralización de la Producción:** Incidentes como el de Colonial Pipeline (aunque fue un ataque a IT que paralizó OT) o los paros en plantas de gigantes automotrices demuestran que detener la producción es un objetivo primario y altamente lucrativo.
 * **Pérdida de Confianza:** Un ataque que altere sutilmente el firmware de un PLC en una línea de cabezas de motor o una CMM podría llevar a la producción de miles de piezas defectuosas, causando fallos catastróficos, retiradas masivas (recalls) y un daño irreparable a la reputación.
 
-## 1.2 El Contexto: Vulnerabilidad en la Cadena de Suministro
+## El Contexto: Vulnerabilidad en la Cadena de Suministro
 
 Nuestro escenario se centra en un proveedor Tier 1 automotriz. Este no es un objetivo cualquiera. La industria automotriz opera con un modelo Just-in-Time (JIT) que exige una disponibilidad operativa del 99.999%.
 
@@ -30,7 +30,7 @@ Estos puntos de entrada, aparentemente inofensivos, se convierten en la cabeza d
 
 
 
-## 1.3 El Propósito Real del Laboratorio
+## El Propósito Real del Laboratorio
 
 El propósito de este proyecto es demostrar de forma irrefutable que este escenario de ataque no es teórico, sino una amenaza práctica y presente.
 
@@ -41,7 +41,7 @@ Este laboratorio es la herramienta para responder a las preguntas críticas que 
 * *¿Podemos detectar a un actor interno modificando el programa de un PLC?*
 * *¿Funcionan realmente nuestros controles de segmentación de red?*
 
-## 1.4 Objetivos Específicos
+## Objetivos Específicos
 
 Para cumplir con este propósito, el proyecto se divide en los siguientes objetivos clave:
 
