@@ -90,6 +90,15 @@ const config: Config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ataquesec',
+        path: 'docs/Ataque',
+        routeBasePath: 'ataque',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
     /*[
       '@docusaurus/plugin-content-docs',
       {
@@ -134,6 +143,13 @@ const config: Config = {
           docsPluginId: 'implementacion',
           position: 'left',
           label: 'Implementación',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'ataqueSidebar',
+          docsPluginId: 'ataquesec',
+          position: 'left',
+          label: 'Ataque',
         },
         /*{
           type: 'docSidebar',
